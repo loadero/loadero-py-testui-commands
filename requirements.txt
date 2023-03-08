@@ -1,0 +1,9 @@
+
+# dev
+black
+pylint
+
+
+# deps
+python_testui
+requests==2.28.1
