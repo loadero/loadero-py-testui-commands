@@ -10,6 +10,7 @@ git+https://github.com/loadero/loadero-py-testui-commands.git@master
 ```
 
 After which you will be able to install all of the dependencies using pip.
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -31,6 +32,7 @@ migrating the script to Loadero, you do not need to import the functions there
 as-well, that will be done automatically.
 
 This is how you can import the functions in your script file:
+
 ```py
 from commands.set_file import set_file
 from commands.set_request_header import set_request_header
@@ -43,6 +45,7 @@ from commands.time_execution import time_execution
 
 After which they can be used in your script file as any other function. 
 Script example:
+
 ```py
 def test_on_loadero(driver: TestUIDriver):
     really_long_pause = 300
@@ -59,7 +62,6 @@ def test_on_loadero(driver: TestUIDriver):
     # Example of timing execution without specifying a timeout.
     time_execution("locate_search_bar_and_wait", locate_search_bar_and_wait)
 ```
-
 
 ## Commands
 
