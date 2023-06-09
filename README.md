@@ -6,7 +6,7 @@ Installation is as simple as adding this line to your requirements.txt
 (or equalivent) file.
 
 ```bash
-git+https://github.com/loadero/loadero-py-testui-commands.git@master
+git+https://github.com/loadero/loadero-py-testui-commands.git@v1.0.0
 ```
 
 After which you will be able to install all of the dependencies using pip.
@@ -15,16 +15,15 @@ After which you will be able to install all of the dependencies using pip.
 pip install -r requirements.txt
 ```
 
-The latest tag (or master) always will be the most up-to-date version when 
-compared to the commands used in Loadero environment.
+The latest tag always will be the most up-to-date version when compared to the 
+commands used in the Loadero environment.
 
 ## Usage
 
 These Py-TestUI custom commands were made to simplify local script development 
-for usage in Loadero environment. By using these commands, you can write your 
-Loadero script locally and then upload it to Loadero without any changes. This 
-also allows for more rapid development because it can be debugged and ran 
-locally. 
+for usage in the Loadero environment. By using these commands, you can write your 
+Loadero script locally and then upload it to Loadero. This also allows for more 
+rapid development because the script can be debugged and run locally.
 
 To use the commands in your tests, you need to download this dependency to your 
 project (as shown in above) and then only import the functions in your 
@@ -63,22 +62,26 @@ def test_on_loadero(driver: TestUIDriver):
     time_execution("locate_search_bar_and_wait", locate_search_bar_and_wait)
 ```
 
+Not all commands behave the same way as they do in the Loadero environment. 
+Some of them are modified to work in a local environment, such as 
+`update_network` and `set_request_header`.
+
 ## Commands
 
-Not all commands behave the same way as they do in Loadero environment. Some of 
-them are modified to work in local environment. Such as `updateNetwork` and 
-`setRequestHeader`. The following table shows all available commands and if they 
+The following table shows all available commands and if they 
 will behave the same in both environments.
 
-| Command                   | Differences                                                                            |
-| ------------------------- | -------------------------------------------------------------------------------------- |
-| `ignoreAlert`             | No differences                                                                         |
-| `setFile`                 | Any local file can be used, Loadero constant can be used if the same file name is used |
-| `setRequestHeader`        | No request header will be set                                                          |
-| `setUserAgent`            | User agent won't be changed                                                            |
-| `timeExecution`           | Execution time will be logged, but not saved                                           |
-| `updateNetwork`           | Network settings will not be updated                                                   |
-| `waitForDownloadFinished` | Function will finish instantly and not wait for download to be finished                |
+| Command                      | Differences                                                                            |
+| ---------------------------- | -------------------------------------------------------------------------------------- |
+| `ignore_alert`               | No differences                                                                         |
+| `set_file`                   | Any local file can be used, Loadero constant can be used if the same file name is used |
+| `set_request_header`         | No request header will be set                                                          |
+| `set_user_agent`             | User agent won't be changed                                                            |
+| `time_execution`             | Execution time will be logged, but not saved                                           |
+| `update_network`             | Network settings will not be updated                                                   |
+| `wait_for_download_finished` | Function will finish instantly and not wait for download to be finished                |
 
-Full descriptions for each function and their usage can be found in 
-[Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/) page.
+Full descriptions for how each function behaves in Loadero and their usage can 
+be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
+page. To see the differences between local and Loadero environment, you can
+compare the descriptions in the wiki to the differences tab in this README.
