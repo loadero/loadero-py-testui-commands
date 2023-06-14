@@ -71,6 +71,11 @@ Some of them are modified to work in a local environment, such as
 The following table shows all available commands and if they 
 will behave the same in both environments.
 
+Full descriptions for how each function behaves in Loadero and their usage can 
+be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
+page. To see the differences between local and Loadero environment, you can
+compare the descriptions in the wiki to the differences mentioned in this README.
+
 | Command                      | Differences                                                                            |
 | ---------------------------- | -------------------------------------------------------------------------------------- |
 | `ignore_alert`               | No differences                                                                         |
@@ -80,8 +85,3 @@ will behave the same in both environments.
 | `time_execution`             | Execution time will be logged, but not saved                                           |
 | `update_network`             | Network settings will not be updated                                                   |
 | `wait_for_download_finished` | Function will finish instantly and not wait for download to be finished                |
-
-Full descriptions for how each function behaves in Loadero and their usage can 
-be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
-page. To see the differences between local and Loadero environment, you can
-compare the descriptions in the wiki to the differences mentioned in this README.
