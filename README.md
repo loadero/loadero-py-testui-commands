@@ -68,8 +68,8 @@ Some of them are modified to work in a local environment, such as
 
 ## Commands
 
-The following table shows all available commands and if they 
-will behave the same in both environments.
+The following table shows all available commands and whether there are any 
+changes to how they function in a local environment.
 
 Full descriptions for how each function behaves in Loadero and their usage can 
 be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
