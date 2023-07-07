@@ -33,7 +33,7 @@ jobs:
     - name: build wheel and source tarball
       run: python -m build --sdist --wheel --outdir dist/ .
 
-#     - name: publish to PyPI
-#       uses: pypa/gh-action-pypi-publish@release/v1
-#       with:
-#         password: ${{ secrets.LOADERO_PYTHON_PYPI_API_TOKEN }}
+    - name: publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.LOADERO_PYTHON_PYPI_API_TOKEN }}
