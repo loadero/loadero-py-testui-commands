@@ -2,8 +2,8 @@
 
 ## Installation
 
-Installation is as simple as adding this line to your requirements.txt 
-(or equalivent) file.
+Installation is as simple as adding this line to your requirements.txt
+(or equivalent) file.
 
 ```bash
 git+https://github.com/loadero/loadero-py-testui-commands.git@v1.0.0
@@ -15,18 +15,18 @@ After which you will be able to install all of the dependencies using pip.
 pip install -r requirements.txt
 ```
 
-The latest tag always will be the most up-to-date version when compared to the 
+The latest tag always will be the most up-to-date version when compared to the
 commands used in the Loadero environment.
 
 ## Usage
 
-These Py-TestUI custom commands were made to simplify local script development 
-for usage in the Loadero environment. By using these commands, you can write your 
-Loadero script locally and then upload it to Loadero. This also allows for more 
+These Py-TestUI custom commands were made to simplify local script development
+for usage in the Loadero environment. By using these commands, you can write your
+Loadero script locally and then upload it to Loadero. This also allows for more
 rapid development because the script can be debugged and run locally.
 
-To use the commands in your tests, you need to download this dependency to your 
-project (as shown in above) and then only import the functions in your 
+To use the commands in your tests, you need to download this dependency to your
+project (as shown in above) and then only import the functions in your
 script file. Keep in mind, that when migrating the script to Loadero, you do not
 need to import the functions there as-well, that will be done automatically.
 
@@ -42,7 +42,7 @@ from commands.wait_for_download_finished import wait_for_download_finished
 from commands.time_execution import time_execution
 ```
 
-After which they can be used in your script file as any other function. 
+After which they can be used in your script file as any other function.
 Script example:
 
 ```py
@@ -62,16 +62,16 @@ def test_on_loadero(driver: TestUIDriver):
     time_execution("locate_search_bar_and_wait", locate_search_bar_and_wait)
 ```
 
-Not all commands behave the same way as they do in the Loadero environment. 
-Some of them are modified to work in a local environment, such as 
+Not all commands behave the same way as they do in the Loadero environment.
+Some of them are modified to work in a local environment, such as
 `update_network` and `set_request_header`.
 
 ## Commands
 
-The following table shows all available commands and whether there are any 
+The following table shows all available commands and whether there are any
 changes to how they function in a local environment.
 
-Full descriptions for how each function behaves in Loadero and their usage can 
+Full descriptions for how each function behaves in Loadero and their usage can
 be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
 page. To see the differences between local and Loadero environment, you can
 compare the descriptions in the wiki to the differences mentioned in this README.
