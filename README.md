@@ -6,7 +6,7 @@ Installation is as simple as adding this line to your requirements.txt
 (or equivalent) file.
 
 ```bash
-git+https://github.com/loadero/loadero-py-testui-commands.git@v1.0.0
+loadero-py-testui-commands
 ```
 
 After which you will be able to install all of the dependencies using pip.
