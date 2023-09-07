@@ -1,4 +1,4 @@
-# loadero-py-testui-commands ![PyPI - Version](https://img.shields.io/pypi/v/loadero-py-testui-commands)
+# loadero-py-testui-commands ![PyPI - Version](https://img.shields.io/pypi/v/loadero-py-testui-commands?link=https%3A%2F%2Fpypi.org%2Fproject%2Floadero-py-testui-commands%2F)
 
 ## Installation
 
@@ -72,7 +72,7 @@ The following table shows all available commands and whether there are any
 changes to how they function in a local environment.
 
 Full descriptions for how each function behaves in Loadero and their usage can
-be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
+be found in [Loadero wiki](https://wiki.loadero.com/docs/testui-python/custom-commands/)
 page. To see the differences between local and Loadero environment, you can
 compare the descriptions in the wiki to the differences mentioned in this README.
 
