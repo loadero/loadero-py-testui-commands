@@ -1,4 +1,4 @@
-# loadero-py-testui-commands <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/loadero-py-testui-commands?link=https%3A%2F%2Fpypi.org%2Fproject%2Floadero-py-testui-commands%2F">
+# loadero-py-testui-commands [![PyPI - Version](https://img.shields.io/pypi/v/loadero-py-testui-commands)](https://pypi.org/project/loadero-py-testui-commands/)
 
 ## Installation
 
