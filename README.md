@@ -1,4 +1,4 @@
-# loadero-py-testui-commands
+# loadero-py-testui-commands [![PyPI - Version](https://img.shields.io/pypi/v/loadero-py-testui-commands)](https://pypi.org/project/loadero-py-testui-commands/)
 
 ## Installation
 
@@ -52,9 +52,9 @@ def test_on_loadero(driver: TestUIDriver):
 
     def locate_search_bar_and_wait():
         e(
-            driver, "css", "#search_form_input_homepage"
+            driver, "css", "#searchbox_input"
         ).wait_until_visible().send_keys("loadero")
-        e(driver, "css", "#search_button_homepage").wait_until_visible().click()
+        e(driver, "css", "[aria-label='Search']").wait_until_visible().click()
         e(driver, "css", "#r1-0 > div > h2").wait_until_visible()
         time.sleep(really_long_pause)
 
@@ -72,7 +72,7 @@ The following table shows all available commands and whether there are any
 changes to how they function in a local environment.
 
 Full descriptions for how each function behaves in Loadero and their usage can
-be found in [Loadero wiki](https://wiki.loadero.com/testui-python/custom-commands/)
+be found in [Loadero wiki](https://wiki.loadero.com/docs/testui-python/custom-commands/)
 page. To see the differences between local and Loadero environment, you can
 compare the descriptions in the wiki to the differences mentioned in this README.
 
