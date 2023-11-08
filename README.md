@@ -50,16 +50,16 @@ def test_on_loadero(driver: TestUIDriver):
     really_long_pause = 300
     driver.navigate_to("https://duckduckgo.com/")
 
-    def locate_search_bar_and_wait():
+    def locate_search_bar():
         e(
             driver, "css", "#searchbox_input"
-        ).wait_until_visible().send_keys("loadero")
+        ).wait_until_visible().send_keys("QA Processes")
         e(driver, "css", "[aria-label='Search']").wait_until_visible().click()
         e(driver, "css", "#r1-0 > div > h2").wait_until_visible()
         time.sleep(really_long_pause)
 
     # Example of timing execution without specifying a timeout.
-    time_execution("locate_search_bar_and_wait", locate_search_bar_and_wait)
+    time_execution("locate_search_bar", locate_search_bar)
 ```
 
 Not all commands behave the same way as they do in the Loadero environment.
