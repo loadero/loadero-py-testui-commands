@@ -88,7 +88,7 @@ compare the descriptions in the wiki to the differences mentioned in this README
 | `update_network`             | Network settings will not be updated                                                                                                          |
 | `wait_for_download_finished` | Function will finish instantly and not wait for download to be finished                                                                       |
 
-The `emails.json` file should be located in the same directory where `pom.xml` file is located in your project and should have the following structure:
+The `emails.json` file should be located in the directory from which you will be running the tests and should have the following structure:
 
 ```json
 {
