@@ -80,7 +80,7 @@ compare the descriptions in the wiki to the differences mentioned in this README
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ignore_alert`               | No differences                                                                                                                                |
 | `receive_email`              | By default an empty array will be returned, but `emails.json` file can be saved in the working directory which will contain all of the emails |
-| `gen_email`                  | Full email or only first part can be provided, if only the first part is provided than `@mailinator` is appended                              |
+| `gen_email`                  | Full email or only first part can be provided, if only the first part is provided then `@mailinator.com` is appended                          |
 | `set_file`                   | Any local file can be used, Loadero constant can be used if the same file name is used                                                        |
 | `set_request_header`         | No request header will be set                                                                                                                 |
 | `set_user_agent`             | User agent won't be changed                                                                                                                   |
