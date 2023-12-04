@@ -76,12 +76,38 @@ be found in [Loadero wiki](https://wiki.loadero.com/docs/testui-python/custom-co
 page. To see the differences between local and Loadero environment, you can
 compare the descriptions in the wiki to the differences mentioned in this README.
 
-| Command                      | Differences                                                                            |
-| ---------------------------- | -------------------------------------------------------------------------------------- |
-| `ignore_alert`               | No differences                                                                         |
-| `set_file`                   | Any local file can be used, Loadero constant can be used if the same file name is used |
-| `set_request_header`         | No request header will be set                                                          |
-| `set_user_agent`             | User agent won't be changed                                                            |
-| `time_execution`             | Execution time will be logged, but not saved                                           |
-| `update_network`             | Network settings will not be updated                                                   |
-| `wait_for_download_finished` | Function will finish instantly and not wait for download to be finished                |
+| Command                      | Differences                                                                                                                                   |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `gen_email`                  | Full email or only first part can be provided, if only the first part is provided then `@mailinator.com` is appended                          |
+| `ignore_alert`               | No differences                                                                                                                                |
+| `receive_email`              | By default an empty array will be returned, but `emails.json` file can be saved in the working directory which will contain all of the emails |
+| `set_file`                   | Any local file can be used, Loadero constant can be used if the same file name is used                                                        |
+| `set_request_header`         | No request header will be set                                                                                                                 |
+| `set_user_agent`             | User agent won't be changed                                                                                                                   |
+| `time_execution`             | Execution time will be logged, but not saved                                                                                                  |
+| `update_network`             | Network settings will not be updated                                                                                                          |
+| `wait_for_download_finished` | Function will finish instantly and not wait for download to be finished                                                                       |
+
+The `emails.json` file should be located in the directory from which you will be
+running the tests and should have the following structure:
+
+```json
+{
+  "emails": [
+    {
+      "from": "email_from",
+      "to": "email_to",
+      "headers": {
+        "header1": "header_value"
+      },
+      "subject": "email_subject",
+      "text/html": "html body",
+      "text/plain": "plain text body"
+    }
+  ]
+}
+```
+
+To simulate a more realistic environment, you can modify the `emails.json` file 
+mid-run to add additional emails to the array. The file will be read every time
+the `receive_email` command is called.
