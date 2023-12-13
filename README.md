@@ -33,13 +33,14 @@ need to import the functions there as-well, that will be done automatically.
 This is how you can import the functions in your script file:
 
 ```py
+from commands.receive_email import gen_email, receive_email
+from commands.ignore_alert import ignore_alert
 from commands.set_file import set_file
 from commands.set_request_header import set_request_header
 from commands.set_user_agent import set_user_agent
-from commands.ignore_alert import ignore_alert
+from commands.time_execution import time_execution
 from commands.update_network import update_network
 from commands.wait_for_download_finished import wait_for_download_finished
-from commands.time_execution import time_execution
 ```
 
 After which they can be used in your script file as any other function.
