@@ -33,9 +33,8 @@ need to import the functions there as-well, that will be done automatically.
 This is how you can import the functions in your script file:
 
 ```py
-from commands.receive_email import gen_email
+from commands.receive_email import gen_email, receive_email
 from commands.ignore_alert import ignore_alert
-from commands.receive_email import receive_email
 from commands.set_file import set_file
 from commands.set_request_header import set_request_header
 from commands.set_user_agent import set_user_agent
